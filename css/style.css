@@ -352,6 +352,40 @@ footer>a {
 }
 
 
+
+
+.direct {
+    background-color: #0e3c70;
+    color: #fff;
+    width: 120px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 999;
+}
+
+.direct>ul>li {
+    padding: 5px 0 20px;
+    margin: 10px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.direct>ul>li:last-of-type {
+    border: none;
+    margin: 0;
+
+}
+
+.direct>ul>li>a {
+    display: block;
+}
+
+
+
+
 .pop {
     width: 500px;
     height: 400px;
