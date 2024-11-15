@@ -1,5 +1,7 @@
 $(function () {
 
+
+    // 네브
     $('nav>ul>li').mouseenter(function () {
         $(this).children('.sub').stop().slideDown();
     })
@@ -7,30 +9,24 @@ $(function () {
         $(this).children('.sub').stop().slideUp();
     })
 
-
     $('nav>ul>li').focusin(function () {
         $(this).children('.sub').stop().slideDown();
-        $(this).children('a').addClass('on')
+        $(this).children('a').addClass('on');
     })
-
     $('nav>ul>li').focusout(function () {
         $(this).children('.sub').stop().slideUp();
-        $(this).children('a').removeClass('on')
-
+        $(this).children('a').removeClass('on');
     })
 
     $('.sub>li').focusin(function () {
-        $(this).children('a').addClass('on')
+        $(this).children('a').addClass('on');
     })
-
-
     $('.sub>li').focusout(function () {
-        $(this).children('a').removeClass('on')
+        $(this).children('a').removeClass('on');
     })
 
 
-
-
+    // 슬라이드
     function slide() {
         $('.slide>ul').animate({ top: '-400px' }, 1000, function () {
             $(this).append($('.slide>ul>li').first());
@@ -39,28 +35,24 @@ $(function () {
     }
     setInterval(slide, 3000)
 
+    // 탭
 
-
-
-
-    $('.cont>ul>li').click(function () {
-        $('.cont>ul>li').removeClass();
+    $('.con>ul>li').click(function () {
+        $('.con>ul>li').removeClass('on');
         $(this).addClass('on');
-        $('.cont>ul>li').children('.tab').hide();
+        $('.tab').hide();
         $(this).children('.tab').show();
     })
 
 
-
-    $('.cont>ul>li').focusin(function () {
-        $('.cont>ul>li').removeClass();
+    $('.con>ul>li').focusin(function () {
+        $('.con>ul>li').removeClass('on');
         $(this).addClass('on');
-        $('.cont>ul>li').children('.tab').hide();
+        $('.tab').hide();
         $(this).children('.tab').show();
     })
 
-
-
+    // 팝업
 
     $('.pop_on').click(function () {
         $('.pop').show();
@@ -68,9 +60,5 @@ $(function () {
     $('.pop_off').click(function () {
         $('.pop').hide();
     })
-
-
-
-
 
 })
